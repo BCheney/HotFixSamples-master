@@ -1,0 +1,21 @@
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.2.3'
+        classpath 'cn.jiajixin.nuwa:gradle:1.2.2'
+    }
+}
+allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url "http://mvn.gt.igexin.com/nexus/content/repositories/releases/"
+        }
+    }
+}
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
